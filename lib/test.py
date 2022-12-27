@@ -48,8 +48,8 @@ def getSignatureKey(key, date_stamp, regionName, serviceName):
 # embed credentials in code.
 # access_key = os.environ.get('AWS_ACCESS_KEY_ID')
 # secret_key = os.environ.get('AWS_SECRET_ACCESS_KEY')
-access_key = "AKIAZH5S5KDML7EI27E6"
-secret_key = "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"
+access_key = ""
+secret_key = ""
 if access_key is None or secret_key is None:
     print('No access key is available.')
     sys.exit()
