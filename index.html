@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Amazon Transcribe WebSocket API - Sample Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta24/shoelace.css"> -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            Real-time Audio Transcription
+        </h1>
+
+
+        <div id="error" class="isa_error"></div>
+
+        <div class="row">
+            <div class="col">
+                <!-- <label>Access ID:</label> -->
+                <input type="hidden" id="access_id" placeholder="ACCESS ID" value="AKIAZH5S5KDML7EI27E6" />
+
+                <!-- <label>Secret Key:</label> -->
+                <input type="hidden" id="secret_key" placeholder="SECRET KEY" value="Pn0li2v6ESK+YBUXjKNTekmlm60QE2BYXjJP1cLo" />
+                <!-- <label>Session Token (if using MFA):</label> -->
+                <input type="hidden" id="session_token" placeholder="SESSION TOKEN" value="" />
+            </div>
+            <div class="col">
+                <label>Language: </label>
+                <select id="language">
+                    <optgroup label="English">
+                        <option value="en-US">US English (en-US)</option>
+                        <option value="en-AU">Australian English (en-AU)</option>
+                        <option value="en-GB">British English (en-GB)</option>
+                    </optgroup>
+                    <optgroup label="French">
+                        <option value="fr-CA">Canadian French (fr-CA)</option>
+                        <option value="fr-FR">French (fr-FR)</option>
+                    </optgroup>
+                    <optgroup label="Spanish">
+                        <option value="es-US">US Spanish (es-US)</option>
+                    </optgroup>
+                    <optgroup label="Hindi">
+                        <option value="hi-IN">India Hindi (hi-IN)</option>
+                    </optgroup>
+                </select>
+
+                <label>Target Language:</label>
+                <select id="target-language">
+                    <optgroup label="English">
+                        <option value="en-US">US English (en-US)</option>
+                        <option value="en-AU">Australian English (en-AU)</option>
+                        <option value="en-GB">British English (en-GB)</option>
+                    </optgroup>
+                    <optgroup label="Hindi">
+                        <option value="hi-IN">India Hindi (hi-IN)</option>
+                    </optgroup>
+                    <optgroup label="Spanish">
+                        <option value="es-US">US Spanish (es-US)</option>
+                    </optgroup>
+                </select>
+
+                <label>Region:</label>
+                <select id="region">
+                    <option value="us-east-1">US East (N. Virginia)</option>
+                    <option value="us-east-2">US East (Ohio)</option>
+                    <option value="us-west-2">US West (Oregon)</option>
+                    <option value="ap-southeast-2">Asia Pacific (Sydney)</option>
+                    <option value="ca-central-1">Canada (Central)</option>
+                    <option value="eu-west-1">EU (Ireland)</option>
+                </select>
+            </div>
+        </div>
+        <textarea id="transcript" placeholder="Press Start and speak into your mic" rows="5" style="width: 100%;"
+            readonly="readonly"></textarea>
+        <div class="row">
+            <div class="col">
+                <button id="start-button" class="button-xl" title="Start Transcription">
+                    <i class="fa fa-microphone"></i> Start
+                </button>
+                <button id="stop-button" class="button-xl" title="Stop Transcription" disabled="true"><i
+                        class="fa fa-stop-circle"></i> Stop
+                </button>
+                <button id="reset-button" class="button-xl button-secondary" title="Clear Transcript"> 
+                    Clear Transcript
+                </button>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <input autofocus id="text-to-translate" type="text" class="col" value="" placeholder="Enter text to translate"/>
+            <button id="translate-button" >Translate</button>
+            <div id="translated" class="col"></div>
+        </div> -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="dist/main.js"></script>
+</body>
+
+</html>
