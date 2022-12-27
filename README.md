@@ -6,7 +6,7 @@ Building on an existing AWS Transcribe node.js app, this application takes it on
 
 npm run build generates the main.js in the dist folder, so anytime you make a change, will have to build again. 
 
-The app uses an AWS Lambda function written in Python to properly generate the canonical request params. Refer to <a href="https://docs.aws.amazon.com/general/latest/gr/create-signed-request.html">this</a> link for instructions. You can write your own Lambda function and this will work for you too.  
+The app uses an AWS Lambda function written in Python to properly generate the canonical request params. Refer to <a href="https://docs.aws.amazon.com/general/latest/gr/create-signed-request.html">this</a> link for instructions, otherwise there is a test.py file in the repo that has the same function written inside it. You can write your own Lambda function and this will work for you too.  
 
 Many thanks to the people over at https://github.com/amazon-archives/amazon-transcribe-websocket-static for providing the basis for this POC. Their README is preserved below as is.
 
