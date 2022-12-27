@@ -1,3 +1,15 @@
+## Amazon Transcribe + Translate POC
+
+Building on an existing AWS Transcribe node.js app, this application takes it one step further and connects it to AWS Translate as well, so you can convert in real time. To run this, simply run: 
+1. npm install
+2. npm run build
+
+npm run build generates the main.js in the dist folder, so anytime you make a change, will have to build again. 
+
+The app uses an AWS Lambda function written in Python to properly generate the canonical request params. Refer to <a href="https://docs.aws.amazon.com/general/latest/gr/create-signed-request.html">this</a> link for instructions. You can write your own Lambda function and this will work for you too.  
+
+Many thanks to the people over at https://github.com/amazon-archives/amazon-transcribe-websocket-static for providing the basis for this POC. Their README is preserved below as is.
+
 ## Amazon Transcribe Websocket Static
 
 [Try it out](https://transcribe-websockets.go-aws.com/)
